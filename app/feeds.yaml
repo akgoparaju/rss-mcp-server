@@ -1,0 +1,7 @@
+feeds:
+  - url: https://insidegnss.com/feed/
+    tags: [C-band, TrustPoint, GPSIA, LEO, PNT]
+  - url: https://spacenews.com/feed/
+    tags: [LEO, spoofing, spectrum]
+  - url: https://www.gpsworld.com/feed/
+    tags: [GNSS, spoof, jamming, M-code]
