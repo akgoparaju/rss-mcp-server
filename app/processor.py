@@ -7,6 +7,7 @@ with open("app/feeds.yaml") as f:
     CONFIG = yaml.safe_load(f)
 
 def fetch_and_filter():
+    logger.info("Fetching and filtering RSS feeds...")
     for feed in CONFIG["feeds"]:
         url, tags = feed["url"], feed["tags"]
         parsed = feedparser.parse(url)
@@ -24,3 +25,4 @@ def fetch_and_filter():
                     "llm_text": content,
                 }
                 save_entry_if_unseen(obj)
+        logger.info(f"Saved {entry['title']} with ID {entry['id']}")
