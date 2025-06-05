@@ -5,14 +5,14 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
-from .state import save_entry_if_unseen
+from state import save_entry_if_unseen
 
 # Setup logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # Load feed configuration
-with open("app/feeds.yaml") as f:
+with open("feeds.yaml") as f:
     CONFIG = yaml.safe_load(f)
 
 def fetch_and_filter():

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import logging
-from app.processor import fetch_and_filter
-from app.state import get_unread, mark_all_read
+from processor import fetch_and_filter
+from state import seen_entries
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

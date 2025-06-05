@@ -3,6 +3,7 @@ from pathlib import Path
 
 STATE_FILE = Path("app/data.json")
 STATE_FILE.parent.mkdir(exist_ok=True, parents=True)
+seen_entries = set()
 
 def load_state():
     if STATE_FILE.exists():
